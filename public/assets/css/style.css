@@ -1,0 +1,56 @@
+body{
+    margin:0;
+    padding:0;
+}
+.main{min-height:100%; 
+      padding-bottom:60px; 
+      box-sizing:border-box;}
+#navbar{
+    height:50px;
+    width:100%;
+    border-radius:0;
+}
+#footer {
+    height:50px;
+    color:white;
+    text-align:center;
+}
+
+#footer p{
+    width:100%;
+    text-align:center;
+    line-height:50px;
+}
+#landingBG{
+    background-image:url("https://images.pexels.com/photos/311458/pexels-photo-311458.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+    background-size:contain;
+}
+#landingBtn{
+    margin-top:1em;
+}
+#landingGap{
+    margin-top:6em;
+}
+.maroon{
+    color:#C00000;
+}
+.maroon:hover{
+    color:#500000;
+}
+
+
+/*For blogs.ejs & blogDetails.ejs*/
+.blogsContainer{
+    width:50%;
+    margin:0 auto;
+}
+.header .icon{
+    font-size:2em;
+}
+textarea{
+    height:100%;
+    text-align:justify;
+}
+p{
+    text-align:justify;
+}

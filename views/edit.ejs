@@ -1,0 +1,36 @@
+<% include ./partials/header %>
+       <div class="blogsContainer">
+       
+        <!--blog info show-->
+
+<!--        form starts here -->
+        <form class="ui form" action="/blogs/<%=bloginfo._id%>?_method=PUT" method="POST">
+        
+        <div class="ui segment">
+        <h3 class="ui top attached header">New Post</h3>
+        <h2 class="ui center aligned header">
+           <div class="field">
+                <input type="text" name="blog[title]" placeholder="Title" value="<%= bloginfo.title %>">
+           </div>
+            
+        </h2>
+        <div class="ui clearing divider"></div>
+            <div class="field">
+                <input type="text" name="blog[image]" placeholder="Image URL" value="<%=bloginfo.image%>">
+            </div>
+           <div class="ui clearing divider"></div>
+                <div class="field">
+                    <textarea rows="20" placeholder="Body" name="blog[body]"><%=bloginfo.body%></textarea>
+                </div>  
+                          </div><!--ui segment end--> 
+                 <a class="ui right floated button" href="/blogs">
+                  Discard
+                 </a>
+                 <button class="ui right floated primary button">
+                      Save
+                </button>
+           </form>
+           
+        <!--blog info show end-->
+
+<% include ./partials/footer %>

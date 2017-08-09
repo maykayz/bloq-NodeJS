@@ -1,0 +1,45 @@
+<% include ./partials/header %>
+    
+        <!--toolbox-->
+        <div class="ui container" style="width:50%;margin:0 auto;">
+            <div class="ui divider">
+               <div class="ui icon menu">
+                  <a class="item">
+                    <i class="header icon"></i>
+                  </a>
+                  <a class="item">
+                    <i class="bold icon"></i>
+                  </a>
+                  <a class="item">
+                    <i class="italic icon"></i>
+                  </a>
+                  <a class="item">
+                    <i class="linkify icon"></i>
+                  </a>
+                </div>
+        <!--the rest form-->
+                <h3 class="ui top attached header">
+                  New Post
+                </h3>
+                <div class="ui attached segment">
+                    <form class="ui form" action="/blogs" method="POST">
+                      <div class="field">
+                        <input type="text" name="title" placeholder="Title">
+                      </div>
+                      <div class="field">
+                        <input type="text" name="image" placeholder="Image URL">
+                      </div>
+                      <div class="field">
+                        <textarea placeholder="Body" name="body"></textarea>
+                      </div>
+                      <button class="ui button" type="submit" id="clickme">Post</button>
+                    </form>
+                </div>
+                </div>
+    
+            </div>
+        
+      
+    
+
+<% include ./partials/footer %>

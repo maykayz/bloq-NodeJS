@@ -1,0 +1,46 @@
+<% include ./partials/header %>
+<script type="text/javascript" src="/assets/js/script.js"></script>
+<div class="ui blogsContainer">
+    <div class="ui items">
+    <% blogs.forEach(function(blog){ %>
+          <div class="item">
+        <div class="image">
+          <img src="<%= blog.image %>">
+        </div>
+        <div class="content">
+          <a class="header" href="/blogs/<%=blog._id%>"><%= blog.title %></a>
+          <div class="meta">
+            <span><%= blog.date %></span>
+          </div>
+          <div class="description">
+            
+            <% if(blog.body) {      %>
+            <p>
+            <%=get20words(blog.body)+" ..."%>
+
+            </p>
+            <% }                    %>
+          </div>
+          <div class="extra">
+            <a href="/blogs/<%=blog._id%>">Read More</a>
+          </div>
+        </div>
+      </div>
+    <% }); %>    
+    </div>
+</div>
+
+<% function get20words(str) {   %>
+<%  var arr = str.split(" ");   %>
+<%    var newArr = [];          %>
+<%    for(var i=0;i<20;i++){    %>
+<%        newArr.push(arr[i]);  %>
+<%  }                           %>
+<%  return newArr.join(" ");    %>
+<% }                            %>
+
+
+
+
+<% include ./partials/footer %>
+
